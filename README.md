@@ -1,4 +1,4 @@
-# Northbridge Motors
+# Dealership
 
 A full-stack dealership management platform with a public facing vehicle inventory site and a private staff portal for managing requests, inventory, and team operations.
 
@@ -47,38 +47,7 @@ The platform is split into two surfaces:
 
 ---
 
-## Project Structure
 
-```
-app/
-├── (public)/          # Public-facing site
-│   ├── inventory/
-│   ├── finance/
-│   ├── trade-in/
-│   ├── contact/
-│   └── ...
-├── admin/
-│   ├── login/         # Auth (login, invite, password reset)
-│   └── (portal)/      # Staff portal (auth-gated)
-│       ├── dashboard/
-│       ├── requests/
-│       ├── inventory/
-│       ├── staff/
-│       ├── roles/
-│       ├── locations/
-│       ├── audit/
-│       └── settings/
-├── api/
-│   ├── public/        # Public form submission endpoints
-│   ├── portal/        # Internal portal API (badge counts etc.)
-│   └── cron/          # Scheduled job endpoints
-├── components/
-│   ├── portal/        # Staff portal UI components
-│   └── ...            # Shared public components
-└── lib/               # Auth, Prisma client, permissions, utilities
-```
-
----
 
 ## Getting Started
 
