@@ -156,6 +156,7 @@ async function main() {
         email: SEED_OWNER_EMAIL,
         passwordHash,
         roleId: ownerRoleId,
+        isActive: true,
         inviteAccepted: true,
         locations: {
           create: Object.values(locationMap).map((locationId) => ({ locationId })),

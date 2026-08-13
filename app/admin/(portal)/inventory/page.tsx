@@ -4,7 +4,7 @@ import { requirePermission } from "../../../lib/auth-helpers";
 import { hasPermission } from "../../../lib/permissions";
 import { prisma } from "../../../lib/prisma";
 import { Package, Plus, Download } from "lucide-react";
-import type { VehicleStatus } from "@prisma/client";
+import type { VehicleStatus } from "../../../../generated/prisma/client";
 import { InventoryFilters } from "./InventoryFilters";
 import { InventoryTable } from "../../../components/portal/InventoryTable";
 

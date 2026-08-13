@@ -110,19 +110,6 @@ export function LoginForm() {
 
       {/* Card */}
       <div className="relative w-full max-w-md mx-4">
-
-        {/* Top identity strip */}
-        <div className="flex items-center justify-between mb-6 px-1">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.4)" }}>
-              Northbridge Motors
-            </span>
-          </div>
-          <span className="text-xs font-medium px-2 py-0.5 rounded-full border" style={{ color: "rgba(255,255,255,0.3)", borderColor: "rgba(255,255,255,0.1)" }}>
-            Staff only
-          </span>
-        </div>
-
         {/* Main card */}
         <div
           className="rounded-2xl overflow-hidden"
@@ -138,7 +125,7 @@ export function LoginForm() {
               Sign in
             </h1>
             <p className="text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>
-              Staff portal — authorised access only
+              Staff portal
             </p>
           </div>
 
@@ -187,7 +174,7 @@ export function LoginForm() {
                   autoComplete="email"
                   required
                   disabled={isLocked || isPending}
-                  placeholder="you@northbridgemotors.co.nz"
+                  placeholder="you@promptly.nz"
                   className="h-11 rounded-xl px-4 text-sm text-white placeholder:text-white/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors focus:outline-none"
                   style={{
                     backgroundColor: "rgba(255,255,255,0.06)",

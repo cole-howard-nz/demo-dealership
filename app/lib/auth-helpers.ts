@@ -60,7 +60,7 @@ export async function getUserLocationFilter(): Promise<string[] | null> {
 // ─── Audit log helper ─────────────────────────────────────────────────────────
 
 import { prisma } from "./prisma";
-import { type Prisma } from "@prisma/client";
+import { type Prisma } from "../../generated/prisma/client";
 
 interface LogActionParams {
   actorId: string;

@@ -8,7 +8,7 @@ import { prisma } from "../../../lib/prisma";
 import { requirePermission } from "../../../lib/auth-helpers";
 import { hasPermission } from "../../../lib/permissions";
 import { logAction } from "../../../lib/auth-helpers";
-import type { VehicleStatus } from "@prisma/client";
+import type { VehicleStatus } from "../../../../generated/prisma/client";
 import {
   BODY_TYPES,
   TRANSMISSIONS,

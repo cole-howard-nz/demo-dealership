@@ -2,7 +2,7 @@
 
 import { useTransition, useState } from "react";
 import { Loader2 } from "lucide-react";
-import type { VehicleStatus } from "@prisma/client";
+import type { VehicleStatus } from "../../../generated/prisma/client";
 
 const STATUS_CONFIG: Record<VehicleStatus, { label: string; bg: string; text: string; border: string }> = {
   AVAILABLE: { label: "Available", bg: "#DCFCE7", text: "#15803D", border: "#86EFAC" },

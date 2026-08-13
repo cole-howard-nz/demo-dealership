@@ -2,7 +2,7 @@
 
 import { useTransition } from "react";
 import { Loader2 } from "lucide-react";
-import type { RequestStatus } from "@prisma/client";
+import type { RequestStatus } from "../../../generated/prisma/client";
 
 const STATUS_LABELS: Record<RequestStatus, string> = {
   NEW: "New",

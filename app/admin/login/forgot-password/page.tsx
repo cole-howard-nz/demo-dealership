@@ -24,15 +24,6 @@ export default function ForgotPasswordPage() {
       />
 
       <div className="relative w-full max-w-md mx-4">
-        <div className="flex items-center justify-between mb-6 px-1">
-          <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.4)" }}>
-            Northbridge Motors
-          </span>
-          <span className="text-xs font-medium px-2 py-0.5 rounded-full border" style={{ color: "rgba(255,255,255,0.3)", borderColor: "rgba(255,255,255,0.1)" }}>
-            Staff only
-          </span>
-        </div>
-
         <div
           className="rounded-2xl overflow-hidden"
           style={{

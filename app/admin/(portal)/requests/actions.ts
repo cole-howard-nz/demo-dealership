@@ -5,7 +5,7 @@ import { z } from "zod";
 import { prisma } from "../../../lib/prisma";
 import { requireAuth, requirePermission, logAction } from "../../../lib/auth-helpers";
 import { hasPermission } from "../../../lib/permissions";
-import type { RequestStatus } from "@prisma/client";
+import type { RequestStatus } from "../../../../generated/prisma/client";
 
 // ─── Shared return type ───────────────────────────────────────────────────────
 

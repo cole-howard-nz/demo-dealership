@@ -3,7 +3,7 @@
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import type { RequestStatus } from "@prisma/client";
+import type { RequestStatus } from "../../../generated/prisma/client";
 
 interface CalendarBooking {
   id: string;

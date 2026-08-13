@@ -1,4 +1,4 @@
-import type { Vehicle as PrismaVehicle, VehicleStatus } from "@prisma/client";
+import type { Vehicle as PrismaVehicle, VehicleStatus } from "../../generated/prisma/client";
 import type { Vehicle, VehicleImage } from "../types";
 
 export type PrismaVehicleWithLocation = PrismaVehicle & {

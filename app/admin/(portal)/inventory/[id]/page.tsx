@@ -11,7 +11,7 @@ import { VehicleStatusWidget } from "../../../../components/portal/VehicleStatus
 import { updateVehicle, updateVehicleStatus } from "../actions";
 import { format, formatDistanceToNow } from "date-fns";
 import { ArrowLeft, MapPin, ExternalLink } from "lucide-react";
-import type { VehicleStatus } from "@prisma/client";
+import type { VehicleStatus } from "../../../../../generated/prisma/client";
 
 export const metadata: Metadata = {
   title: "Vehicle Detail — Northbridge Motors Staff Portal",

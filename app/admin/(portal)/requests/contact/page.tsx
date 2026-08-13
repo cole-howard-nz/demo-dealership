@@ -7,7 +7,7 @@ import { StatusBadge } from "../../../../components/portal/StatusBadge";
 import { RequestFilterBar } from "../../../../components/portal/RequestFilterBar";
 import { formatDistanceToNow } from "date-fns";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import type { RequestStatus, Prisma } from "@prisma/client";
+import type { RequestStatus, Prisma } from "../../../../../generated/prisma/client";
 
 export const metadata: Metadata = {
   title: "Contact Requests — Northbridge Motors Staff Portal",

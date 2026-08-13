@@ -9,7 +9,7 @@ import { TestDriveCalendar } from "../../../../components/portal/TestDriveCalend
 import { ViewToggle } from "../../../../components/portal/ViewToggle";
 import { formatDistanceToNow } from "date-fns";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import type { RequestStatus, Prisma } from "@prisma/client";
+import type { RequestStatus, Prisma } from "../../../../../generated/prisma/client";
 
 export const metadata: Metadata = {
   title: "Test Drive Bookings — Northbridge Motors Staff Portal",

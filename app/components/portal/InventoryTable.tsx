@@ -5,7 +5,7 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { MapPin, ChevronDown } from "lucide-react";
 import { bulkUpdateVehicleStatus } from "../../admin/(portal)/inventory/actions";
-import type { VehicleStatus } from "@prisma/client";
+import type { VehicleStatus } from "../../../generated/prisma/client";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 

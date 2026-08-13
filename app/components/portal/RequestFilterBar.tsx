@@ -3,7 +3,7 @@
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useCallback, useTransition } from "react";
 import { Search, X } from "lucide-react";
-import type { RequestStatus } from "@prisma/client";
+import type { RequestStatus } from "../../../generated/prisma/client";
 
 const STATUS_OPTIONS: { value: RequestStatus | ""; label: string }[] = [
   { value: "", label: "All statuses" },
