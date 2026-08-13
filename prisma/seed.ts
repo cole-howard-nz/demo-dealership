@@ -1,15 +1,17 @@
 /**
- * Northbridge Motors — Staff Portal
+ * Northbridge Motors
  * Prisma seed: default roles + Owner account
  *
  * Run with: npx prisma db seed
  * (add "prisma": { "seed": "ts-node prisma/seed.ts" } to package.json)
  */
 
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../generated/prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 import bcrypt from "bcryptjs";
 
-const prisma = new PrismaClient();
+const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL_UNPOOLED });
+const prisma = new PrismaClient({ adapter });
 
 // ─── Permission catalogue ─────────────────────────────────────────────────────
 
@@ -141,10 +143,10 @@ async function main() {
   });
 
   if (existingOwner) {
-    console.log(`    ✓ Owner account exists (${existingOwner.email}) — skipping`);
+    console.log(`    ✓ Owner account exists (${existingOwner.email}) - skipping`);
   } else {
-    const SEED_OWNER_EMAIL = process.env.SEED_OWNER_EMAIL ?? "owner@northbridgemotors.co.nz";
-    const SEED_OWNER_PASSWORD = process.env.SEED_OWNER_PASSWORD ?? "ChangeMe!2025";
+    const SEED_OWNER_EMAIL = process.env.SEED_OWNER_EMAIL ?? "owner@promptly.nz";
+    const SEED_OWNER_PASSWORD = process.env.SEED_OWNER_PASSWORD ?? "Password123";
     const SEED_OWNER_NAME = process.env.SEED_OWNER_NAME ?? "Portal Owner";
 
     const passwordHash = await bcrypt.hash(SEED_OWNER_PASSWORD, 12);
@@ -161,7 +163,7 @@ async function main() {
       },
     });
     console.log(`    ✓ Owner created: ${owner.email}`);
-    console.log(`    ⚠  Password: ${SEED_OWNER_PASSWORD} — change this immediately after first login`);
+    console.log(`    ⚠  Password: ${SEED_OWNER_PASSWORD} - change this immediately after first login`);
   }
 
   console.log("✅ Seed complete.");

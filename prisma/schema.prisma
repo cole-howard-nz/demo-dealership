@@ -1,14 +1,13 @@
-// Northbridge Motors — Staff Portal
+// Northbridge Motors
 // Prisma schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider = "prisma-client"
+  output   = "../generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
-  url = env("DATABASE_URL")
-  directUrl = env("DATABASE_URL_UNPOOLED")
 }
 
 // ─── Enums ───────────────────────────────────────────────────────────────────
@@ -276,7 +275,7 @@ model FinanceApplication {
   @@index([createdAt])
 }
 
-// Polymorphic internal notes — one FK is set per row
+// Polymorphic internal notes - one FK is set per row
 model Note {
   id        String   @id @default(cuid())
   body      String
@@ -328,7 +327,7 @@ model TestDriveBooking {
 
 model Vehicle {
   id                      String        @id @default(cuid())
-  /// URL slug — auto-generated from year/make/model, unique
+  /// URL slug - auto-generated from year/make/model, unique
   slug                    String        @unique
   make                    String
   model                   String

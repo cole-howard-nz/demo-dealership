@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   // During development: serves at /admin
   // In production: full domain staff.northbridgemotors.co.nz mapped via Vercel
   // No structural changes needed between environments.

@@ -21,6 +21,7 @@ dist/
 # Prisma
 prisma/*.db
 prisma/*.db-journal
+/generated/prisma
 
 # Vercel
 .vercel
